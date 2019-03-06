@@ -1,0 +1,27 @@
+/*
+Theme Name: Across Seconds
+Description:
+Version: 1.0
+Author: Dhawal M
+*/
+
+// Variables
+@import "./assets/sass/variables";
+
+// Mixins
+@import "./assets/sass/mixins";
+
+// Bootstrap
+@import './node_modules/bootstrap/scss/bootstrap';
+
+// styles
+@import "./assets/sass/global";
+@import "./assets/sass/text";
+@import "./assets/sass/welcome";
+@import "./assets/sass/navbar";
+@import "./assets/sass/masthead";
+@import "./assets/sass/footer";
+@import "./assets/sass/404";
+
+// Bootstrap Overrides
+@import "./assets/sass/bootstrap-overrides";
