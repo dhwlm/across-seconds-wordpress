@@ -43,4 +43,48 @@
     
   });
 
+  $('#about').waypoint(function (direction) {
+
+    if(direction == 'down'){
+
+      anime.timeline({
+        targets: "body",
+        easing: "easeOutExpo",
+      })
+      .add({
+        background: '#FFF',
+        duration: 2000,
+      })
+      .add({
+        targets: '#about',
+        color: '#111'
+      }, 0)
+      .add({
+        targets: '.menu_part',
+        background: '#111'
+      }, 0)
+
+    }else{
+      anime.timeline({
+        targets: "body",
+        easing: "easeOutExpo",
+      })
+      .add({
+        background: '#1d2122',
+        duration: 2000,
+      })
+      .add({
+        targets: '#about',
+        color: '#FFF'
+      }, 0)
+      .add({
+        targets: '.menu_part',
+        background: '#e9ecef'
+      },0)
+    }
+
+  }, {
+    offset: '25%'
+  });
+
 })(jQuery); // End of use strict

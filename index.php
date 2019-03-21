@@ -35,7 +35,7 @@ get_header();
 
 				<ul class="menu-items list-unstyled my-auto">
 					<li class="menu-item">
-						<a href="">About Us</a>
+						<a href="">About</a>
 					</li>
 					<li class="menu-item">
 						<a href="">Store</a>
@@ -52,12 +52,12 @@ get_header();
 		</nav>
 	</header>
 
-	<section class="content-section text-white scroll-reveal__sequence-container" id="about">
+	<section class="content-section scroll-reveal__sequence-container" id="about">
 		<div class="container">
 			<div class="row" >
 				<div class="col">
 
-					<div class="p-4" style="background: rgba(0, 0, 0, .4)">
+					<div class="p-4">
 						<h2 class="mb-4 scroll-reveal--sequenced">About</h2>
 						
 						<p class="scroll-reveal--sequenced">
@@ -78,9 +78,9 @@ get_header();
 						
 						<p class="scroll-reveal--sequenced">Their debut album ‘Four Lightyears from Home’ is out now! </p>
 						
-						<p class="text-center scroll-reveal--sequenced">
+						<!-- <p class="text-center scroll-reveal--sequenced">
 							<a href="#store" class="js-scroll-trigger btn btn-outline-light text-uppercase mt-4">Get your copy now!</a>
-						</p>
+						</p> -->
 					</div>
 					
 				</div>

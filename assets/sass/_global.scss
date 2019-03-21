@@ -7,7 +7,7 @@ html{
 body{
   @include body-font;
   background: $gray-900;
-  background-image: url('../img/artwork.jpg');
+  // background-image: url('assets/img/branding/artwork.jpg');
   @include background-cover;
   background-attachment: fixed;
   background-position: center bottom;
@@ -16,6 +16,8 @@ body{
   min-height: 100%;
   opacity: 1;
   transition: 1s opacity;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
   .no-scroll{
     overflow: hidden;
@@ -131,7 +133,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 #gallery{
-  background-image: url('../img/band-across-seconds.jpg');
+  background-image: url('assets/img/band/band-across-seconds.jpg');
   @include background-cover;
   background-attachment: fixed;
   background-position: center top;
@@ -140,16 +142,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 #about{
-  background-image: url('../img/band-across-seconds-4.jpg');
-  // background-image: url('../img/bobby.jpg');
-  @include background-cover;
-  background-attachment: fixed;
-  background-position: center top;
-  background-repeat: no-repeat;
+  color: $white;
 }
 
 #news{
-  background-image: url('../img/band-across-seconds-6.jpg');
+  background-image: url('assets/img/band/band-across-seconds-6.jpg');
   @include background-cover;
   background-attachment: fixed;
   background-position: center top;
