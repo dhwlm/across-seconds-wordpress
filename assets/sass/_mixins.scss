@@ -12,6 +12,10 @@
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+@mixin heading-font {
+  font-family: 'Source Serif Pro', Baskerville, Georgia, "Times New Roman", Times, serif;
+}
+
 // transition Mixin
 @mixin transition {
   transition-property: all;

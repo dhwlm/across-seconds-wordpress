@@ -21,7 +21,7 @@ gulp.task('styles', function () {
 gulp.task('js', function () {
   return gulp.src(['./node_modules/bootstrap/dist/js/bootstrap.min.js', './assets/js/app.js', './assets/js/animate.js'])
     .pipe(concat('app.min.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest('./assets/js'));
 });
 

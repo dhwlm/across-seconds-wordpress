@@ -1,52 +1,46 @@
 (function ($) {
   "use strict"; // Start of use strict
   
-  document.addEventListener('DOMContentLoaded', function () {
-    //Wrapper animation
+  $(document).on('click','.menu.open',function(){
+
+    $(this).addClass("close").removeClass("open");
     anime.timeline({
+      targets: ".menu-container",
       easing: "easeOutExpo",
-      targets: ".welcome",
-    })
-    // .add({
-    //   width: ["0vw", "100vw"],
-    //   opacity: 1,
-    //   duration: 1200,
-    // })
-    .add({
-      targets: ".heading",
-      opacity: 1,
-      duration: 1200,
-      translateY: ["-30px", "0px"],
-      easing: "linear",
     })
     .add({
-      targets: ".sub-heading",
-      opacity: 1,
-      duration: 1200,
-      translateY: ["-30px", "0px"],
+      width: ["0vw", "100vw"],
+      opacity: [0,1],
+      duration: 1000,
     })
     .add({
-      targets: ".loader-wrapper",
-      duration: 1800,
-      opacity: 1,
-      easing: "linear",
+      targets: ".menu-items li",
+      opacity: [0, 1],
+      translateY: ["30px", "0px"],
+      delay: (el, i ) => 100 * i
+    },"-=500")
+  });
+
+  $(document).on('click', '.menu.close',function(){
+    
+    $(this).addClass("open").removeClass("close");
+
+    anime.timeline({
+      targets: ".menu-container",
+      easing: "easeOutExpo",
     })
     .add({
-      targets: ".loader",
-      duration: 2300,
-      width: ["0", "100%"],
-      complete: function (anime) {
-        $('body').removeClass('welcome-anime');
-      }
+      targets: ".menu-items li",
+      opacity: [1, 0],
+      translateY: ["0px", "30px"],
+      delay: (el, i ) => 100 * i
     })
     .add({
-      translateX: "100vw",
-      duration: 1200,
-      complete: function (anime) {
-        $('.welcome').remove();
-      }
-    })
+      width: ["100vw", "0vw"],
+      opacity: [1,0],
+      duration: 700,
+    },"-=300")
     
   });
-  
+
 })(jQuery); // End of use strict

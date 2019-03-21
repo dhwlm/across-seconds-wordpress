@@ -14,13 +14,13 @@ add_theme_support( 'title-tag' );
 
 add_filter( 'wpcf7_validate_configuration', '__return_false' );
 
-add_filter( 'body_class', 'custom_class' );
-function custom_class( $classes ) {
-    if ( is_home() && is_front_page() ) {
-        $classes[] = 'welcome-anime';
-    }
-    return $classes;
-}
+// add_filter( 'body_class', 'custom_class' );
+// function custom_class( $classes ) {
+//     if ( is_home() && is_front_page() ) {
+//         $classes[] = 'welcome-anime';
+//     }
+//     return $classes;
+// }
 
 function add_theme_scripts() {
 

@@ -1,176 +1,96 @@
-// Styling for the navbar
-#mainNav {
-  position: absolute;
-  border-bottom: 1px solid $gray-200;
-  background-color: white;
-  // @include sans-serif-font;
-  .navbar-brand {
-    font-weight: 400;
-    color: $gray-800;
-  }
-  .navbar-toggler {
-    font-size: 12px;
-    font-weight: 400;
-    padding: 13px;
-    text-transform: uppercase;
-    color: $gray-800;
-  }
-  .navbar-nav {
-    > li.nav-item {
-      > a {
-        font-size: 12px;
-        font-weight: 400;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-      }
-    }
-  }
-  @media only screen and (min-width: 992px) {
-    border-bottom: 1px solid transparent;
-    background: transparent;
-    .navbar-brand {
-      padding: 1px 20px 0;
-      color: $white;
-      &:focus,
-      &:hover {
-        color: fade-out($white, .2);
-      }
-    }
-    .navbar-nav {
-      > li.nav-item {
-        > a {
-          padding: 10px 20px;
-          color: $white;
-          &:focus,
-          &:hover {
-            // color: fade-out($white, .2);
-            position: relative;
-            &::after{
-              content: ' ';
-              position: absolute;
-              bottom: 0;
-              height: 1px;
-              width: 75%;
-              display: block;
-              background: $white;
-              left: 50%;
-              transform: translateX(-50%);
-            }
-          }
-        }
-      }
-    }
-  }
-  @media only screen and (min-width: 992px) {
-    -webkit-transition: background-color 0.2s;
-    -moz-transition: background-color 0.2s;
-    transition: background-color 0.2s;
-    /* Force Hardware Acceleration in WebKit */
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    &.is-fixed {
-      /* when the user scrolls down, we hide the header right above the viewport */
-      position: fixed;
-      top: -97px;
-      -webkit-transition: -webkit-transform 0.2s;
-      -moz-transition: -moz-transform 0.2s;
-      transition: transform 0.2s;
-      // border-bottom: 1px solid darken($white, .05);
-      box-shadow: 0px 0px 7px 1px rgba($black, .4);
-      // background-color: fade-out($white, .1);
-      background-color: rgba($black,.7);
-      .band-title{
-        height: 60px;
-      }
-      .navbar-brand {
-        color: $gray-200;
-        &:focus,
-        &:hover {
-          color: $primary;
-        }
-      }
-      .navbar-nav {
-        > li.nav-item {
-          > a {
-            color: $gray-200;
-            &:focus,
-            &:hover {
-              color: $primary;
-            }
-          }
-        }
-      }
-    }
-    &.is-visible {
-      /* if the user changes the scrolling direction, we show the header */
-      -webkit-transform: translate3d(0, 100%, 0);
-      -moz-transform: translate3d(0, 100%, 0);
-      -ms-transform: translate3d(0, 100%, 0);
-      -o-transform: translate3d(0, 100%, 0);
-      transform: translate3d(0, 100%, 0);
-    }
-  }
+#cross-icon {
+  display: none;
 }
 
-.band-title{
-  display: block;
-  width: 400px;
-  height: 100px;
-  position: relative;
+#main-menu{
 
-  .as-lines img{
-    position: absolute;
-    z-index: 99;
-    // background-image: url('../img/lines.png');
-    background-size: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 100%;
-    top: 50%;
-    animation: rotateLines 10s linear infinite;
-  }
-  
-  .as-font{
-    position: absolute;
-    z-index: 99;
-    background-image: url('../img/font.png');
-    background-size: 400px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    top: 0;
-  }
-
-  @media (max-width:768px){
+  .menu {
+    transition: all 0.44s;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    z-index: 9;
     
+    &_part {
+      width: 18px; 
+      height: 2px; 
+      position: absolute;
+      background: $gray-200; 
+      right: 0;
+      margin: auto;
+      left: 0;
+      border-radius: 1px;
+      transition: all 0.44s cubic-bezier(0.6, 0.1, 0.4, 1.7);
+      top: calc(50% - ((6.5px)) + -2px);
+      
+      &:nth-of-type(1) {
+        top: calc(50% - ((6.5px)) + -4px);
+        width: 32px;
+      }
+      
+      
+      &:nth-of-type(2) {
+        top: calc(50% - ((6.5px)) + 3px);
+        width: 26px;
+      }
+      
+      
+      &:nth-of-type(3) {
+        top: calc(50% - ((6.5px)) + 10px);
+        width: 20px;
+      }
 
-    .as-font, .as-lines{
-      background-size: 90%;
+    }
+  }
+
+  .menu-container{
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba($gray-800,.97);
+    opacity: 0;
+
+    .menu-items{
+      @include heading-font;
+      li{
+        opacity: 0;
+        a{
+          color: $white;
+          opacity: .9;
+          font-size: 2rem;
+        }
+      }
     }
   }
 }
 
-@keyframes rotateLines {
-  from{
-    transform: translateY(-50%) rotateZ(0deg);
-  } 
-  to{
-    transform: translateY(-50%) rotateZ(360deg);
-  }
+
+
+input#cross-icon:checked + label .menu {
+  transform:scale(1.19) rotate(0deg);
+  border: 2px solid $gray-200;
 }
 
-.logo-wrap{
-  display: block;
+input#cross-icon:checked + label .menu .menu_part:nth-of-type(1) {
+  transform: rotate(45deg);
+  width: 18px !important;
+  top: calc(50% - (1.5px))!important;
+}
 
-  &:hover,&:focus{
+input#cross-icon:checked + label .menu .menu_part:nth-of-type(2) {
+  left: 8px !important;
+  opacity: 0;
+}
 
-    &::after{
-      display: none !important;
-    }
-  }
+input#cross-icon:checked + label .menu .menu_part:nth-of-type(3) {
+  transform: rotate(-45deg);
+  width: 18px!important;
+  top: calc(50% - (1.5px))!important;
 }

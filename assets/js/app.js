@@ -1,8 +1,8 @@
 (function ($) {
   "use strict"; // Start of use strict
 
-  $(".navbar-toggler").click(function () {
-    $('body').toggleClass('no-scroll');
+  $(".menu").click(function () {
+    $('body').toggleClass('overflow-hidden');
   });
 
   // Smooth scrolling using jQuery easing

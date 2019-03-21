@@ -19,37 +19,37 @@ get_header();
 
 <main role="main">
 
-<div class="welcome">
-	<h1 class="heading">Across Seconds</h1>
-	<h3 class="sub-heading"></h3>
-	<div class="loader-wrapper">
-		<div class="loader"></div>
-	</div>
-</div>
-
 	<!-- Masthead -->
 	<header class="masthead" id="page-top">
-		<video muted id="myVideo">
-			<source src="downloads/bg-video.mp4" type="video/mp4">
-			Your browser does not support HTML5 video.
-		</video>
-		<!-- <div class="overlay"></div> -->
-		<div class="container-fluid demo-1" id="main_event">
-			<div class="row scroll-reveal__sequence-container">
-				<div id="large-header" class="large-header">
-					<canvas id="canvas"></canvas>
-					<h1 class="text-hide scroll-reveal--sequenced">Across Seconds - four lightyears from home</h1>
-					<h2 class="scroll-reveal--sequenced">Four Lightyears from Home <br/>is out now! <br /><br /><a  href="#store" class="btn btn-outline-light mt-3 js-scroll-trigger">Get it now</a></h2>
+		<nav class="navbar" id="main-menu">
+			<input id="cross-icon" type="checkbox">
+			<label for="cross-icon">
+				<div class="menu open">
+						<div class="menu_part"></div>
+						<div class="menu_part"></div>
+						<div class="menu_part"></div>
 				</div>
+			</label>
+
+			<div class="menu-container d-flex justify-content-center align-items-center">
+
+				<ul class="menu-items list-unstyled my-auto">
+					<li class="menu-item">
+						<a href="">About Us</a>
+					</li>
+					<li class="menu-item">
+						<a href="">Store</a>
+					</li>
+					<li class="menu-item">
+						<a href="">Music</a>
+					</li>
+					<li class="menu-item">
+						<a href="">Gallery</a>
+					</li>
+				</ul>
+
 			</div>
-		</div><!-- /container -->
-
-		<div class="text-white play-video">
-			<span>
-				<i class="fa fa-play-circle" aria-hidden="true"></i> Play Video
-			</span>
-		</div>
-
+		</nav>
 	</header>
 
 	<section class="content-section text-white scroll-reveal__sequence-container" id="about">
@@ -87,8 +87,6 @@ get_header();
 			</div>
 		</div>
 	</section>
-
-
 
 </main>
 
