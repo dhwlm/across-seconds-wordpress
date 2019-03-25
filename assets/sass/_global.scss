@@ -48,8 +48,6 @@ div.cursor {
   transform-origin: right bottom;
   transform: translate(-50%, -50%);
 
-  transition: transform .4s;
-
   mix-blend-mode: difference;
   animation: heartbeat 5s infinite;
 }

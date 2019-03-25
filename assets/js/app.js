@@ -20,11 +20,21 @@
   });
 
   const cursor = document.querySelector("div.cursor");
+  const menu = document.querySelector("div.menu");
   let mouseX = 0; 
   let mouseY = 0;
   let cursorX = 0;
   let cursorY = 0;
   let speed = .1;
+
+  let cursorWidth = cursor.offsetWidth;
+  let cursorHeight = cursor.offsetHeight;
+  
+
+  let menuTop = menu.offsetTop;
+  let menuBottom = menu.offsetTop + menu.offsetHeight;
+  let menuLeft = menu.offsetLeft;
+  let menuRight = menu.offsetLeft + menu.offsetWidth;
 
   function animate() {
     let distX = mouseX - cursorX;
@@ -36,6 +46,11 @@
     cursor.style.top = cursorY + "px";
     cursor.style.left = cursorX + "px";
 
+    if ((cursorX + cursorWidth) > menuLeft && (cursorX + cursorWidth) < (menuRight + cursorWidth) && (cursorY + cursorHeight) > menuTop && (cursorY + cursorHeight) < (menuBottom + cursorHeight)) {
+      cursor.style.top = (menuTop + (cursorHeight/2)) + "px";
+      cursor.style.left = (menuLeft + (cursorWidth/2)) + "px";
+    }
+
     requestAnimationFrame(animate);
   }
 
@@ -46,11 +61,11 @@
     mouseY = event.pageY;
   })
 
-  document.addEventListener("mousedown", function () {
-    cursor.style.transform = "scale(2)";
-  })
-  document.addEventListener("mouseup", function () {
-    cursor.style.transform = "scale(1)";
-  })
+  // document.addEventListener("mousedown", function () {
+  //   cursor.style.transform = "scale(2)";
+  // })
+  // document.addEventListener("mouseup", function () {
+  //   cursor.style.transform = "scale(1)";
+  // })
 
 })(jQuery); // End of use strict
