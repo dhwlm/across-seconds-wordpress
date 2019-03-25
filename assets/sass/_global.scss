@@ -34,6 +34,26 @@ h6 {
   font-weight: 700;
 }
 
+div.cursor {
+  border:solid 2px $white;
+  background: #fff;
+  z-index: 8;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: right bottom;
+  transform: translate(-50%, -50%);
+
+  transition: transform .4s;
+
+  mix-blend-mode: difference;
+  animation: heartbeat 5s infinite;
+}
+
 .btn{
   border-radius: 0;
   font-size: .8rem;

@@ -44,6 +44,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div class="cursor"></div>
 <?php 
   $domain = "//acrossseconds.com";
 ?>
