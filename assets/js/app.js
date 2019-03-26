@@ -25,7 +25,7 @@
   let mouseY = 0;
   let cursorX = 0;
   let cursorY = 0;
-  let speed = .1;
+  let speed = .05;
 
   let cursorWidth = cursor.offsetWidth;
   let cursorHeight = cursor.offsetHeight;
@@ -49,6 +49,9 @@
     if ((cursorX + cursorWidth) > menuLeft && (cursorX + cursorWidth) < (menuRight + cursorWidth) && (cursorY + cursorHeight) > menuTop && (cursorY + cursorHeight) < (menuBottom + cursorHeight)) {
       cursor.style.top = (menuTop + (cursorHeight/2)) + "px";
       cursor.style.left = (menuLeft + (cursorWidth/2)) + "px";
+      // cursor.style.display = 'none';
+    }else{
+      // cursor.style.display = 'block';
     }
 
     requestAnimationFrame(animate);

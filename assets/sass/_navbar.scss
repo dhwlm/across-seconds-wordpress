@@ -6,7 +6,6 @@
 
   .menu {
     transition: all 0.44s;
-    position: relative;
     width: 60px;
     height: 60px;
     border-radius: 100%;
@@ -15,7 +14,7 @@
     top: 30px;
     cursor: pointer;
     border: 2px solid transparent;
-    z-index: 99;
+    z-index: 9999;
     
     &_part {
       width: 18px; 
@@ -34,12 +33,10 @@
         width: 32px;
       }
       
-      
       &:nth-of-type(2) {
         top: calc(50% - ((6.5px)) + 3px);
         width: 26px;
       }
-      
       
       &:nth-of-type(3) {
         top: calc(50% - ((6.5px)) + 10px);

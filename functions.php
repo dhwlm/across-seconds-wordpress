@@ -29,11 +29,12 @@ function add_theme_scripts() {
   wp_register_script('easing', get_template_directory_uri() . '/assets/js/vendor/jquery.easing.min.js', array('jquery'),'1.1', true);
   wp_register_script('waypoints', get_template_directory_uri() . '/assets/js/vendor/jquery.waypoints.min.js', array('jquery'),'1.1', true);
   wp_register_script('anime', get_template_directory_uri() . '/assets/js/vendor/anime.min.js', array(),'1.1', true);
-  wp_register_script('app', get_template_directory_uri() . '/assets/js/app.min.js', array('jquery','easing','anime', 'waypoints'),'1.1', true);
+  wp_register_script('app', get_template_directory_uri() . '/assets/js/app.min.js', array('jquery','easing','anime', 'waypoints'),'1.0', true);
+  wp_register_script('animate', get_template_directory_uri() . '/assets/js/animate.min.js', array('app','anime', 'waypoints'),'1.0', true);
   wp_enqueue_script('app');
+  wp_enqueue_script('animate');
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
-
 
 function register_my_menu() {
   register_nav_menu('header-menu',__( 'Header Menu' ));

@@ -22,7 +22,7 @@
   });
 
   $(document).on('click', '.menu.close',function(){
-    
+
     $(this).addClass("open").removeClass("close");
 
     anime.timeline({

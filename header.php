@@ -44,10 +44,41 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="cursor"></div>
 <?php 
   $domain = "//acrossseconds.com";
 ?>
+<div class="cursor"></div>
 
+<header class="masthead" id="page-top">
+  <nav class="navbar" id="main-menu">
+    <input id="cross-icon" type="checkbox">
+    <label for="cross-icon">
+      <div class="menu open">
+          <div class="menu_part"></div>
+          <div class="menu_part"></div>
+          <div class="menu_part"></div>
+      </div>
+    </label>
+    
+    <div class="menu-container d-flex justify-content-center align-items-center">
 
+      <ul class="menu-items list-unstyled my-auto">
+        <li class="menu-item">
+          <a href="">About</a>
+        </li>
+        <li class="menu-item">
+          <a href="">Store</a>
+        </li>
+        <li class="menu-item">
+          <a href="">Music</a>
+        </li>
+        <li class="menu-item">
+          <a href="">Gallery</a>
+        </li>
+      </ul>
 
+    </div>
+  </nav>
+  
+
+</header>
