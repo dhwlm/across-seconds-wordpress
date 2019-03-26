@@ -75,10 +75,17 @@
         <li class="menu-item">
           <a href="">Gallery</a>
         </li>
+        <li class="menu-item">
+          <a href="">News</a>
+        </li>
+        <li class="menu-item">
+          <a href="">Contact</a>
+        </li>
       </ul>
-
     </div>
   </nav>
+
+
   
 
 </header>

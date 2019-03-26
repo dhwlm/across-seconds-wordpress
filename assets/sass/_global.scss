@@ -51,6 +51,16 @@ div.cursor {
 
   mix-blend-mode: difference;
   animation: pulse 3s infinite;
+  transition: opacity height width .2s ease-in-out;
+  
+  
+  &.shrink{
+    transition: all .2s ease-in-out;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    animation: none;
+  }
 
   @keyframes pulse {
     0%{transform: translate(-50%,-50%) scale(1);}
