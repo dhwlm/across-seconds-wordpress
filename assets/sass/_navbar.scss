@@ -14,7 +14,7 @@
     top: 30px;
     cursor: pointer;
     border: 2px solid transparent;
-    z-index: 9999;
+    z-index: 99;
     
     &_part {
       width: 18px; 
@@ -51,8 +51,9 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background: rgba($gray-800,.97);
+    background: rgba($gray-800,.99);
     opacity: 0;
+    z-index: 9;
 
     .menu-items{
       @include heading-font;

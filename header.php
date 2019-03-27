@@ -39,7 +39,6 @@
 
 
 	<?php wp_head(); ?>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
   <meta name="google-site-verification" content="bMfbVCGaxYtesicWosp_RcLFzemk--AOsk4w4i7siFs" />
 </head>
 
@@ -61,7 +60,6 @@
     </label>
     
     <div class="menu-container d-flex justify-content-center align-items-center">
-
       <ul class="menu-items list-unstyled my-auto">
         <li class="menu-item">
           <a href="">About</a>
@@ -84,8 +82,13 @@
       </ul>
     </div>
   </nav>
+  <h1 class="text-hide scroll-reveal--sequenced">Across Seconds - Four Lightyears From Home</h1>
 
-
+  <div class="large-header">
+    <h2>Four Lightyears from Home</h2>
+    <h2 class="animate-word"><span>OUT</span> <span>NOW!</span></h2>
+    <p><a  href="#store" class="btn btn-outline-light mt-3 js-scroll-trigger text-uppercase">Get it now</a></p>
+  </div>
   
 
 </header>

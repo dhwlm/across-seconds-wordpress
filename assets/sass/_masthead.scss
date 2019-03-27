@@ -22,17 +22,34 @@ header.masthead {
     opacity: 0;
   }
 
-  h2{
+  .large-header{
     position: absolute;
     width: 100%;
     bottom: 100px;
     text-align: center;
-    color: $white;
     text-transform: uppercase;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: .5rem;
-    font-size: 2rem;
+    
+    h2{
+      color: rgba($white,.8);
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: .5rem;
+      font-size: 2rem;
+
+      &.animate-word{
+        color: $white;
+        font-weight: 600;
+        font-size: 2.6rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+      }
+
+      span {
+        display: inline-block;
+        line-height: 1em;
+      }
+    }
+    
 
     @media only screen and (max-width:767px){
       font-size: 1.2rem;

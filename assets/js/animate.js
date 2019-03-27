@@ -1,5 +1,25 @@
 (function ($) {
   "use strict"; // Start of use strict
+
+  anime.timeline({
+    loop: true
+  })
+  .add({
+    targets: '.animate-word span',
+    scale: [10,1],
+    opacity: [0,1],
+    easing: "easeOutCirc",
+    duration: 800,
+    delay: function(el, i) {
+      return 800 * i;
+    }
+  }).add({
+    targets: '.animate-word',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
   
   $(document).on('click','.menu.open',function(){
 
