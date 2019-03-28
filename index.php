@@ -45,9 +45,6 @@ get_header();
 						
 						<p>Their debut album ‘Four Lightyears from Home’ is out now! </p>
 						
-						<!-- <p class="text-center ">
-							<a href="#store" class="js-scroll-trigger btn btn-outline-light text-uppercase mt-4">Get your copy now!</a>
-						</p> -->
 					</div>
 					
 				</div>

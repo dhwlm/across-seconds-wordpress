@@ -84,6 +84,9 @@
   </nav>
   <h1 class="text-hide scroll-reveal--sequenced">Across Seconds - Four Lightyears From Home</h1>
 
+  <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/parallax/artwork-bg.jpg" alt="" class="bg-layer">
+  <img src="<?php bloginfo('stylesheet_directory');?>/assets/img/parallax/artwork-layer1.png" alt="" class="layer-1">
+
   <div class="large-header">
     <h2>Four Lightyears from Home</h2>
     <h2 class="animate-word"><span>OUT</span> <span>NOW!</span></h2>

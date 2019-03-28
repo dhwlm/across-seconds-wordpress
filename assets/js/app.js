@@ -19,6 +19,21 @@
     }
   });
 
+  $(window).scroll(function () {
+    var scrollPos = $(this).scrollTop();
+    var multiplier = 1200;
+
+    $('.layer-1').css({
+      'transform': 'scale(' + (1 + scrollPos / multiplier) + ')',
+      'bottom': (scrollPos * .4) + 'px'
+    });
+
+    $('.bg-layer').css({
+      'bottom': -(scrollPos*1.2) + 'px'
+    });
+    
+  });
+
   $(window).on('load', function () {
     $(".song-preview").mouseenter(function () {
       $(this).find('img').addClass('blur');

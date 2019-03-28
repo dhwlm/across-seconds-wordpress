@@ -2,7 +2,7 @@ header.masthead {
   position: relative;
   background-color: $gray-800;
   // background: url('../img/bg-masthead.jpg') no-repeat center center;
-  background-image: url('assets/img/branding/artwork.jpg');
+  // background-image: url('assets/img/branding/artwork.jpg');
   @include background-cover;
 	width: 100%;
 	overflow: hidden;
@@ -11,6 +11,24 @@ header.masthead {
   background-attachment: fixed;
   z-index: 1;
   height: 100vh;
+
+  .bg-layer{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .layer-1{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+
   
   .overlay {
     position: absolute;
@@ -54,6 +72,14 @@ header.masthead {
     @media only screen and (max-width:767px){
       font-size: 1.2rem;
       bottom: 150px;
+    }
+  }
+
+  @media only screen and (max-width:1500px){
+    background-image: url('assets/img/branding/artwork.jpg');
+
+    .bg-layer,.layer-1{
+      display: none;
     }
   }
 }
