@@ -25,7 +25,7 @@ get_header();
 				<div class="col">
 
 					<div class="p-4">
-						<h2 class="mb-4 ">About</h2>
+						<h2 class="mb-4 site-heading"><span>About</span></h2>
 						
 						<p>
 							Across Seconds is Dhawal Mehta, Karan Mehta, Kiran Kadadekar and Swar Joshi. Formed in 2016 in Mumbai, India, they decided to move beyond the clemency of spoken word and let their instruments speak for themselves. Ever since its inception, Across Seconds has always aimed at creating beautifully structured pieces of music that seem like a variegated dance between dreams and reality and take their listeners on a journey from oblivion to tranquility.
@@ -202,6 +202,18 @@ get_header();
 		</div>
 	</section>
 
+	<section class="content-section text-white text-center" style="background:rgba(0,0,0,.8)">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+						<?php echo do_shortcode("[rotatingtweets screen_name='across_seconds']"); ?>
+				</div>
+			</div>
+		</div>
+	</section>
+	 
+
+	<?php echo do_shortcode('[instashow columns="5"]'); ?>
 
 
 </main>
