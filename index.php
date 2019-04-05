@@ -59,6 +59,8 @@ get_header();
 					<h2>Music</h2>
 					<p class="lead">Check out previews of our album 'Four Lightyears from Home'</p>
 
+					<iframe src="https://open.spotify.com/embed/album/6oLE1RxWhC6G9TRCQI9YtK" width="100%" height="298" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
 					<div class="row mt-4">
 						<div class="col-md text-center mb-4">
 							<div class="song-preview ">
